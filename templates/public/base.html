@@ -1,0 +1,24 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catgeram {% block title %}{% endblock title %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "styles/public/styles.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "styles/public/secondary.css" %}">
+    <link rel="icon" href="{% static "images/web-icon.png" %}">
+</head>
+<body>
+    <div class="wrapper-navbar">
+      <nav>
+        <a href="/home" class="logo-nav"><h1>Catgeram</h1> </a>
+        
+      </nav>
+      </div>
+    {% block auth_container %}
+    {% endblock auth_container %}
+</body>
+</html>
